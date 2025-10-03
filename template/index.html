@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rule-based Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #chatbox {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        #messages {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .user { color: blue; margin: 5px 0; }
+        .bot { color: green; margin: 5px 0; }
+        input {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            width: 20%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <h2>🤖 Simple Chatbot</h2>
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
 
+    <script>
+        function sendMessage() {
+            let userMessage = document.getElementById("userInput").value;
+            if (userMessage.trim() === "") return;
+
+            let messages = document.getElementById("messages");
+            messages.innerHTML += "<div class='user'><b>You:</b> " + userMessage + "</div>";
+
+            fetch("/get", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "msg=" + encodeURIComponent(userMessage)
+            })
+            .then(response => response.json())
+            .then(data => {
+                messages.innerHTML += "<div class='bot'><b>Bot:</b> " + data.response + "</div>";
+                messages.scrollTop = messages.scrollHeight;
+            });
+
+            document.getElementById("userInput").value = "";
+        }
+    </script>
+</body>
+</html>
