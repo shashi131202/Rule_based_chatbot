@@ -76,6 +76,6 @@ Go to 👉 **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
 
 ## 📸 Demo Screenshot
 
-*(Add a screenshot of your chatbot UI here if you want)*
+![Chatbot Screenshot](images/Screenshot(85).png)
 
 ---
