@@ -29,11 +29,15 @@ The chatbot is **rule-based** and responds using predefined **if-else conditions
 ## 📂 Project Structure
 
 ```
-chatbot-web/
+Rule_based_chatbot/
 │
 ├── chatbot.py          # Flask backend
 ├── templates/
 │   └── index.html      # Frontend UI (HTML, CSS, JS)
+├── images/             # Project screenshots
+│   ├── Screenshot (85).png
+│   ├── Screenshot (86).png
+│   └── chatbot.png
 └── README.md           # Project documentation
 ```
 
@@ -44,8 +48,8 @@ chatbot-web/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/chatbot-web.git
-cd chatbot-web
+git clone https://github.com/your-username/Rule_based_chatbot.git
+cd Rule_based_chatbot
 ```
 
 ### 2. Create Virtual Environment (Optional but Recommended)
@@ -74,7 +78,14 @@ Go to 👉 **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
 
 ---
 
-## 📸 Demo Screenshot
+## 📸 Demo Screenshots
 
+### Chatbot UI – Initial Page
+
+![Chatbot UI 1](images/Screenshot%20\(85\).png)
+
+### Chatbot UI – Conversation Example
+
+![Chatbot UI 2](images/Screenshot%20\(86\).png)
 
 ---
