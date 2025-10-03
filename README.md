@@ -76,6 +76,5 @@ Go to 👉 **[http://127.0.0.1:5000/](http://127.0.0.1:5000/)**
 
 ## 📸 Demo Screenshot
 
-![Chatbot Screenshot](images/Screenshot (85).png)
 
 ---
