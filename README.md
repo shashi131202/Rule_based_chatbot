@@ -1,6 +1,6 @@
 ---
 
-# 🤖 Rule-Based Chatbot (Flask + HTML/JS)
+# 🤖 Rule-Based Chatbot (Flask + HTML)
 
 A simple **web-based chatbot** built using **Python (Flask)** for the backend and **HTML/CSS/JavaScript** for the frontend.
 The chatbot is **rule-based** and responds using predefined **if-else conditions**.
